@@ -1,0 +1,47 @@
+.loc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $color-bg-tertiary;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $color-bg-secondary;
+    width: 100%;
+    padding: 2rem 0rem;
+}
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0rem;
+    & h2 {
+        @include section-title;
+    }
+}
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 2rem 0rem;
+    background-color: $color-bg-secondary;
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    & h2 {
+        @include section-title;
+    }
+}

@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: $color-txt-secondary;
+    background-color: $color-bg-quaternary;
+}
+
+.footer a {
+    text-decoration: none;
+    color: $color-txt-secondary;
+}

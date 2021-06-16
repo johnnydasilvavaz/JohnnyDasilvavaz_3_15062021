@@ -1,0 +1,83 @@
+.card {
+    display: flex;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0rem 0.4rem 0.6rem rgba($color: $color-bg-quaternary, $alpha: 0.1) ;
+    background-color: $color-bg-primary;
+    &__img {
+        height: 70%;
+        width: 100%;
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0.75rem;
+        height: 30%;
+        & h3 {
+            margin: 0rem;
+            height: 50%;
+        }
+        & p {
+            margin: 0rem;
+            height: 50%;
+        }
+    }
+    &__like {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        margin: 1rem;
+    }
+    /*Fonctionnement cards*/
+    &__fonct {
+        background-color: $color-bg-secondary;
+        align-items: center;
+        min-width: 85%;
+        min-height: 4.5rem;
+        margin: 0.75rem 0rem;
+        margin-left: 1rem;
+        & p {
+            font-weight: 700;
+        }
+        & i {
+            color: #7E7E7E;
+            font-size: 1.1rem;
+            margin-left: 0.5rem;
+            margin-right: 1rem;
+        }
+        &__num {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: -0.75rem;
+            background-color: $color-primary;
+            color: $color-txt-secondary;
+            border: none;
+            border-radius: 999px;
+            min-width: 1.5rem;
+            min-height: 1.5rem;
+            z-index: 10;
+        }
+        &--selected {
+            background-color: $color-bg-tertiary;
+        }
+        &--selected i {
+            color: $color-primary;
+        }
+    }
+    /*Restaurants cards*/
+    &__restau {
+        flex-direction: column;
+        margin: 0.5rem 0rem;
+        width: 90%;
+        max-height: 15rem;
+        overflow: hidden;
+    }
+}
