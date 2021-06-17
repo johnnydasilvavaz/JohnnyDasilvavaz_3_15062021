@@ -6,4 +6,9 @@
     margin: 1rem;
     background: rgb(147,86,220);
     background: linear-gradient(355deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
+    box-shadow: 0rem 0.3rem 0.7rem rgba($color: $color-bg-quaternary, $alpha: 0.3);
+    cursor: pointer;
+    &--shop {
+        padding: 1rem 3rem;
+    }
 }

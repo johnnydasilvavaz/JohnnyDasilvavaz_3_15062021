@@ -3,7 +3,30 @@
 }
 
 @mixin section-title {
+    font-family: Roboto-medium;
     align-self: flex-start;
-    padding-left: 1rem;
+    padding-left: 5%;
     font-weight: 900;
+}
+
+@mixin link-elements {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+
+@mixin like {
+    color: $color-txt-secondary;
+    font-size: 1.5rem;
+    & i {
+        -webkit-text-stroke-width: .1rem;
+        -webkit-text-stroke-color: $color-txt-primary;
+    }
 }

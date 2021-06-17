@@ -1,0 +1,64 @@
+.img-restau {
+    position: fixed;
+    height: calc(15em + 65px);
+    width: 100%;
+    z-index: 1;
+    & img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    & + div {
+        margin-top: calc(15em + 65px);
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-bg-secondary;
+    width: 100%;
+    border-radius: 2rem 2rem 0rem 0rem;
+    z-index: 2;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        width: 93%;
+        align-items: center;
+        padding-bottom: 3rem;
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+    }
+    &__part {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 2em 0em 0em;
+        &__title {
+            font-family: Roboto-thin;
+            width: 95%;
+            & h3 {
+                margin: 0em;
+                padding-bottom: .4rem;
+            }
+            & p {
+                margin: 0em;
+            }
+        }
+        & + form {
+            margin-top: 1em;
+        }
+    }
+}
+
+.line {
+    width: 15%;
+    border-top: 3px solid $color-tertiary;
+    padding-bottom: 0.5rem;
+}

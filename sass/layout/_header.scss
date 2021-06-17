@@ -9,6 +9,13 @@
     background-color: $color-bg-primary;
     box-shadow: 0px 2px 4px rgba($color: $color-bg-quaternary, $alpha: 0.3);
     z-index: 100;
+    &__return {
+        position: absolute;
+        left: 1rem;
+    }
+    & a {
+        @include link-elements;
+    }
 }
 
 .header + div {

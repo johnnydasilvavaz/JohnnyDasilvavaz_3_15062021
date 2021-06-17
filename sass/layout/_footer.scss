@@ -1,12 +1,27 @@
 .footer {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     color: $color-txt-secondary;
     background-color: $color-bg-quaternary;
-}
-
-.footer a {
-    text-decoration: none;
-    color: $color-txt-secondary;
+    & a {
+        text-decoration: none;
+        color: $color-txt-secondary;
+    }
+    & i {
+        font-size: 0.8rem;
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 1rem 0rem;
+    }
+    &__element {
+        font-weight: 400;
+        &--strong {
+            font-weight: 800;
+        }
+    }
 }
