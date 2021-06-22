@@ -70,6 +70,7 @@
                 height: 100%;
                 overflow: hidden;
                 & p, h3 {
+                    display: block;
                     height: 50%;
                     white-space: nowrap;
                     overflow: hidden;

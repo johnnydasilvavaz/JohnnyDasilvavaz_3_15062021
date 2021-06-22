@@ -227,6 +227,7 @@
 }
 
 .card__body__items--restau p, .card__body__items--restau h3 {
+  display: block;
   height: 50%;
   white-space: nowrap;
   overflow: hidden;
@@ -257,16 +258,6 @@
 .card__like__i {
   position: absolute;
   color: black;
-  /*&::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            transform-origin: top;
-            background-color: $color-bg-primary;
-        }*/
 }
 
 .card__like__i--over {
@@ -274,30 +265,43 @@
   color: white;
 }
 
-.card__like__i:hover::after {
-  -webkit-animation: fillheart 1.5s forwards;
-          animation: fillheart 1.5s forwards;
+.card__like__i--over:hover + i {
+  -webkit-animation: fillheart .5s forwards;
+          animation: fillheart .5s forwards;
+}
+
+.card__like__i--fill {
+  font-size: 1.6rem;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff79da), to(#9356dc));
+  background: -webkit-linear-gradient(bottom, #ff79da 0%, #9356dc 100%);
+  background: -o-linear-gradient(bottom, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(0deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @-webkit-keyframes fillheart {
   0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes fillheart {
   0% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
