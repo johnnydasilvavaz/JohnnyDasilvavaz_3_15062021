@@ -1,20 +1,42 @@
 .card {
     display: flex;
+    position: relative;
     border: none;
     border-radius: 1rem;
     max-width: 30rem;
     box-shadow: 0rem 0.4rem 0.6rem rgba($color: $color-bg-quaternary, $alpha: 0.1) ;
     background-color: $color-bg-primary;
-    & a {
+    & a::after {
         @include link-elements;
     }
     &__img {
-        height: 70%;
+        max-height: 70%;
         width: 100%;
         overflow: hidden;
+        position: relative;
+        &--new {
+            &::after {
+                content: "Nouveau";
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-tertiary;
+                border-radius: .1rem;
+                width: 5rem;
+                height: 1.5rem;
+                top: 1rem;
+                right: 1rem;
+                color: darken($color: $color-tertiary, $amount: 40);
+                font-family: Roboto-medium;
+                font-size: .9rem;
+                box-shadow: 0rem .1rem .2rem rgba($color: $color-bg-quaternary, $alpha: 0.3);
+            }
+        }
         & img {
             object-fit: cover;
             max-width: 100%;
+            transform: translateY(-3.5rem);
         }
     }
     &__body {
@@ -26,6 +48,7 @@
         &__items {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             height: 80%;
             width: 85%;
             & h3 {
@@ -37,8 +60,7 @@
                 height: 45%;
             }
             & p {
-                font-family: Roboto-thin;
-                font-weight: 700;
+                font-family: Roboto-light;
                 display: flex;
                 align-items: center;
                 margin: 0rem;
@@ -108,7 +130,7 @@
             z-index: 10;
         }
         &--selected {
-            background-color: $color-bg-tertiary;
+            background-color: lighten($color-primary, 35);
         }
         &--selected i {
             color: $color-primary;
@@ -120,7 +142,7 @@
         align-items: center;
         margin: 0.5rem 0rem;
         width: 90%;
-        max-height: 15rem;
+        height: 15rem;
         overflow: hidden;
     }
     /*Menu cards*/

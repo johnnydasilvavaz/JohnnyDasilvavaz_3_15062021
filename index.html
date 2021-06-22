@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="html html__index" lang="fr">
     <head>
         <meta charset="utf-8">
         <title>ohmyfood</title>
@@ -9,6 +9,14 @@
         <script src="https://kit.fontawesome.com/35379ab04b.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <div class="splash">
+            <div class="splash__subcircle"></div>
+            <div class="splash__subcircle-2"></div>
+            <div class="splash__subcircle-3"></div>
+            <div class="splash__title">
+                <p>ohmyfood</p>
+            </div>
+        </div>
         <div class="content">
 
             <!--Header-->
@@ -32,7 +40,9 @@
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, selectionnés par nos soins</p>
                 <form action="#restaurants">
-                    <input type="submit" class="btn" value="Explorez nos restaurants">
+                    <button type="submit" class="btn">
+                            Explorez nos restaurants
+                    </button>
                 </form>
             </section>
 
@@ -67,68 +77,65 @@
                 <h2>Restaurants</h2>
                 <div class="restaurants__items">
                     <div class="card card__restau">
-                        <a href="./restaurants/la-palette-du-gout.html">
-                            <div class="card__img">
-                                <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                        <a href="./restaurants/la-palette-du-gout.html"></a>
+                        <div class="card__img card__img--new">
+                            <img src="./img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card__body">
+                            <div class="card__body__items">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
                             </div>
-                            <div class="card__body">
-                                <div class="card__body__items">
-                                    <h3>La palette du goût</h3>
-                                    <p>Ménilmontant</p>
-                                </div>
-                                <div class="card__side card__like">
-                                    <i class="fas fa-heart"></i>
-                                </div>
+                            <div class="card__side card__like">
+                                <i class="far fa-heart card__like__i"></i>
+                                <i class="fas fa-heart card__like__i card__like__i--over"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card card__restau">
-                        <a href="">
-                            <div class="card__img">
-                                <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                        <a href=""></a>
+                        <div class="card__img  card__img--new">
+                            <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card__body">
+                            <div class="card__body__items">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
                             </div>
-                            <div class="card__body">
-                                <div class="card__body__items">
-                                    <h3>La note enchantée</h3>
-                                    <p>Charonne</p>
-                                </div>
-                                <div class="card__side card__like">
-                                    <i class="fas fa-heart"></i>
-                                </div>
+                            <div class="card__side card__like">
+                                <i class="fas fa-heart"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card card__restau">
-                        <a href="">
-                            <div class="card__img">
-                                <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                        <a href=""></a>
+                        <div class="card__img">
+                            <img src="./img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card__body">
+                            <div class="card__body__items">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
                             </div>
-                            <div class="card__body">
-                                <div class="card__body__items">
-                                    <h3>À la française</h3>
-                                    <p>Cité Rouge</p>
-                                </div>
-                                <div class="card__side card__like">
-                                    <i class="fas fa-heart"></i>
-                                </div>
+                            <div class="card__side card__like">
+                                <i class="fas fa-heart"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="card card__restau">
-                        <a href="">
-                            <div class="card__img">
-                                <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                        <a href=""></a>
+                        <div class="card__img">
+                            <img src="./img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card__body">
+                            <div class="card__body__items">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
                             </div>
-                            <div class="card__body">
-                                <div class="card__body__items">
-                                    <h3>Le délice des sens</h3>
-                                    <p>Folie Méricourt</p>
-                                </div>
-                                <div class="card__side card__like">
-                                    <i class="fas fa-heart"></i>
-                                </div>
+                            <div class="card__side card__like">
+                                <i class="fas fa-heart"></i>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </section>

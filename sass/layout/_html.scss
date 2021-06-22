@@ -1,4 +1,21 @@
-html {
-    font-family: "Roboto-regular", Arial, Helvetica, sans-serif;
+.html {
+    font-family: "Roboto-light", Arial, Helvetica, sans-serif;
     font-size: 16px;
+    font-weight: 200 900;
+    scroll-behavior: smooth;
+    &__index {
+        animation: overflow 2s forwards;
+    }
+}
+
+@keyframes overflow {
+    0% {
+        overflow: hidden;
+    }
+    99.99% {
+        overflow: hidden;
+    }
+    100% {
+        overflow: auto;
+    }
 }

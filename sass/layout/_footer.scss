@@ -11,6 +11,7 @@
     }
     & i {
         font-size: 0.8rem;
+        width: 6%;
     }
     &__items {
         display: flex;
@@ -19,9 +20,11 @@
         padding: 1rem 0rem;
     }
     &__element {
-        font-weight: 400;
+        font-family: Roboto-light;
         &--strong {
-            font-weight: 800;
+            font-family: Roboto-regular;
+            font-weight: 400;
         }
+        padding: 0.25rem 0rem;
     }
 }
