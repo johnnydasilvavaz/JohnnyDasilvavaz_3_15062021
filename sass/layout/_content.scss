@@ -2,5 +2,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 1200px;
     align-items: center;
+    padding-top: 65px;
+    box-shadow: 0 0 .5rem rgba($color-bg-quaternary, .2);
 }

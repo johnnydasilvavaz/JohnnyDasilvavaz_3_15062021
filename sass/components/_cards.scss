@@ -10,7 +10,7 @@
         @include link-elements;
     }
     &__img {
-        max-height: 70%;
+        height: 70%;
         width: 100%;
         overflow: hidden;
         position: relative;
@@ -35,8 +35,8 @@
         }
         & img {
             object-fit: cover;
-            max-width: 100%;
-            transform: translateY(-3.5rem);
+            width: 100%;
+            height: 100%;
         }
     }
     &__body {
@@ -103,17 +103,16 @@
     &__fonct {
         background-color: $color-bg-secondary;
         align-items: center;
-        min-width: 85%;
+        width: 85%;
         min-height: 4.5rem;
-        margin: 0.75rem 0rem;
-        margin-left: 1rem;
+        margin: .75rem 1rem .75rem 2rem;
         & p {
             font-weight: 700;
         }
         & i {
             color: #7E7E7E;
             font-size: 1.1rem;
-            margin-left: 0.5rem;
+            margin-left: .5rem;
             margin-right: 1rem;
         }
         &__num {
@@ -121,7 +120,7 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            left: -0.75rem;
+            left: -.75rem;
             background-color: $color-primary;
             color: $color-txt-secondary;
             border: none;
@@ -145,6 +144,12 @@
         width: 90%;
         height: 15rem;
         overflow: hidden;
+        @media (min-width: 768px) {
+            max-width: 22rem;
+        }
+        @media (min-width: 992px) {
+            max-width: 30rem;
+        }
     }
     /*Menu cards*/
     &__menu {

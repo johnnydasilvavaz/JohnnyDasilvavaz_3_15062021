@@ -16,10 +16,15 @@
     align-items: center;
     text-align: center;
     background-color: $color-bg-secondary;
-    max-width: 100%;
-    padding: 2rem 1rem;
+    width: 100%;
+    padding: 2rem 0rem;
     & h2 {
-        @include section-title;
+        font-family: Roboto-medium;
+        padding: 0rem 3rem;
+        margin: 0;
+    }
+    & p {
+        padding: 0 1rem;
     }
 }
 
@@ -30,12 +35,21 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 2rem 0rem;
+    padding: 2rem 0;
     & h2 {
         @include section-title;
     }
     & i {
         width: 7%;
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
     }
 }
 
@@ -44,18 +58,24 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 2rem 0rem;
+    padding: 2rem 0;
     background-color: $color-bg-secondary;
     &__items {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 1rem;
+        }
     }
     & h2 {
         @include section-title;
     }
-    &:before {
+    &::before {
         display: block;
         content: "";
         height: 65px;

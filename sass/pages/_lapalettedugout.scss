@@ -2,6 +2,7 @@
     position: fixed;
     height: calc(15em + 65px);
     width: 100%;
+    max-width: 1200px;
     z-index: 1;
     & img {
         object-fit: cover;
@@ -9,7 +10,7 @@
         width: 100%;
     }
     & + div {
-        margin-top: calc(15em + 65px);
+        margin-top: calc(15em);
     }
 }
 
