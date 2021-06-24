@@ -89,6 +89,7 @@
         width: 15%;
         height: 90%;
         &--price {
+            font-family: Roboto-medium;
             align-items: flex-end;
             height: 100%;
         }
@@ -159,12 +160,45 @@
         width: 100%;
         height: 4em;
         margin: 0.5rem 0rem;
+        overflow: hidden;
+        @include animcards;
+        &:hover > .card__menu__extra {
+            margin-right: 0;
+            & > i {
+                animation: valid .5s ;
+            }
+        }
         &__body {
             display: flex;
             justify-content: space-between;
             align-items: center;
             height: 80%;
-            width: 93%;
+            width: 100%;
+            min-width: 20%;
+            padding: 0 .75rem;
+        }
+        &__extra {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-tertiary;
+            color: $color-txt-secondary;
+            font-size: 1.2rem;
+            height: 100%;
+            width: 5rem;
+            margin-right: -5rem;
+            transition: all .5s;
+            & i {
+                transition: all .5s;
+            }
+        }
+        @keyframes valid {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
         }
     }
 }

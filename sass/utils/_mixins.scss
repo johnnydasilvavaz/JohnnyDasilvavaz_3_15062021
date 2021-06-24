@@ -31,43 +31,65 @@
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 2;
-    &--between {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-        z-index: 1;
-        
-    }
     &__i {
         position: absolute;
         color: $color-txt-primary;
         &--over {
             font-size: 1.35rem;
             color: $color-txt-secondary;
-            &:hover + i {
-                animation: fillheart .5s forwards;
-            }
         }
         &--fill {
             font-size: 1.6rem;
             transform: scale(0);
             background: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
             background-clip: text;
+            -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+    }
+    &__fillcontainer {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.2rem;
+        height: 1.2rem;
+        &:hover > i {
+            animation: fillheart .3s forwards;
+        }
+        &:active > i {
+            animation: fillheart .3s forwards;
         }
     }
     @keyframes fillheart {
         0% {
             transform: scale(0);
+            opacity: 0;
         }
         90% {
             transform: scale(1.05);
+            opacity: 1;
         }
         100%{
             transform: scale(1);
+        }
+    }
+}
+
+@mixin animcards {
+    @for $i from 1 through 5 {
+        &:nth-child(0n + #{$i}) {
+            animation: appear .5s #{$i / 8 - .125}s backwards;
+        }
+    }
+    @keyframes appear {
+        0% {
+            opacity: 0;
+            transform: translateY(1rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 }

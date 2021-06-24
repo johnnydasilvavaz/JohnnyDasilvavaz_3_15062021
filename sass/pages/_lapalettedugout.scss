@@ -34,6 +34,9 @@
         align-items: center;
         justify-content: space-between;
         width: 95%;
+        @media (min-width: 576px) {
+            justify-content: center;
+        }
     }
     &__part {
         display: flex;
