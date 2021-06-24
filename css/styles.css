@@ -742,6 +742,7 @@
   font-family: "Roboto-light", Arial, Helvetica, sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
+  scroll-padding-top: 65px;
 }
 
 .html__index {
@@ -799,7 +800,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 65px;
+  margin-top: 65px;
   -webkit-box-shadow: 0 0 0.5rem rgba(53, 53, 53, 0.2);
           box-shadow: 0 0 0.5rem rgba(53, 53, 53, 0.2);
 }
@@ -1073,15 +1074,6 @@
   -ms-flex-item-align: start;
       align-self: flex-start;
   padding-left: 1rem;
-}
-
-.restaurants::before {
-  display: block;
-  content: "";
-  height: 65px;
-  margin: -65px 0 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
 .img-restau {
