@@ -17,7 +17,7 @@
         "../sass/layout/_header.scss",
         "../sass/layout/_footer.scss",
         "../sass/pages/_index.scss",
-        "../sass/pages/_lapalettedugout.scss"
+        "../sass/pages/_restaurants.scss"
     ],
     "names": [],
     "file": "styles.min.css"
