@@ -1,8 +1,6 @@
 .splash {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex;
     width: 100%;
     height: 100%;
     background-color: $color-bg-primary;
@@ -16,51 +14,45 @@
         border-radius: 999px;
         background-color: $color-tertiary;
         transform-origin: 48% 50%;
-        animation: rotation-1 2s 0.3s forwards;
+        animation: rotation-1 2s .3s;
     }
     &__subcircle-2 {
         position: absolute;
-        content: "";
         width: 18.5rem;
         height: 18.5rem;
         border-radius: 999px;
         background-color: $color-secondary;
         transform-origin: 52% 50%;
-        animation: rotation-2 2s 0.2s forwards;
+        animation: rotation-1 2s .2s;
     }
     &__subcircle-3 {
         position: absolute;
-        content: "";
         width: 18.5rem;
         height: 18.5rem;
         border-radius: 999px;
         background-color: $color-primary;
         transform-origin: 50% 52%;
-        animation: rotation-3 2s 0.1s forwards;
+        animation: rotation-2 2s .1s;
     }
     &__title {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex;
         font-family: Shrikand;
         font-size: 2rem;
         width: 19rem;
         height: 19rem;
-        border: 0rem;
+        border: 0;
         border-radius: 999px;
         background-color: $color-bg-primary;
         z-index: 151;
     }
 }
 
-$rotation: 1turn;
-
 @keyframes rotation-1 {
     0% {
         transform: rotateZ(0);
     }
     100% {
-        transform: rotateZ($rotation);
+        transform: rotateZ(1turn);
     }
 }
 
@@ -69,16 +61,7 @@ $rotation: 1turn;
         transform: rotateZ(0);
     }
     100% {
-        transform: rotateZ($rotation);
-    }
-}
-
-@keyframes rotation-3 {
-    0% {
-        transform: rotateZ(0);
-    }
-    100% {
-        transform: rotateZ(-$rotation);
+        transform: rotateZ(-1turn);
     }
 }
 

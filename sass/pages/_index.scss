@@ -1,8 +1,6 @@
 .loc {
     font-family: Roboto-regular;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex;
     width: 100%;
     background-color: $color-bg-tertiary;
     & i {
@@ -11,16 +9,15 @@
 }
 
 .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    @include flex(column);
     background-color: $color-bg-secondary;
     width: 100%;
-    padding: 2rem 0rem;
-    & h2 {
+    padding: 2rem 0;
+    text-align: center;
+    & h1 {
         font-family: Roboto-medium;
-        padding: 0rem 3rem;
+        font-size: 1.5rem;
+        padding: 0 3rem;
         margin: 0;
     }
     & p {
@@ -30,10 +27,7 @@
 
 .fonctionnement {
     font-family: Roboto-regular;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flex(column, space-between);
     width: 100%;
     padding: 2rem 0;
     & h2 {
@@ -43,9 +37,7 @@
         width: 7%;
     }
     &__items {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column, flex-start);
         width: 100%;
         @media (min-width: 768px) {
             flex-direction: row;
@@ -54,21 +46,17 @@
 }
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, flex-start);
     width: 100%;
     padding: 2rem 0;
     background-color: $color-bg-secondary;
     &__items {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column, flex-start);
         width: 100%;
         @media (min-width: 768px) {
             flex-direction: row;
-            flex-wrap: wrap;
             justify-content: space-evenly;
+            flex-wrap: wrap;
             gap: 1rem;
         }
     }

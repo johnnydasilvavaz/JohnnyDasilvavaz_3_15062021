@@ -1,78 +1,33 @@
-@mixin title-color($color: $color-txt-primary) {
-    color: $color;
-}
-
 @mixin section-title {
     font-family: Roboto-medium;
     align-self: flex-start;
     padding-left: 1rem;
 }
 
+@mixin shadows ($alpha, $blur: .6rem, $vert: .4rem) {
+    box-shadow: 0 $vert $blur rgba(black, $alpha);
+}
+
+@mixin flex($dir: row, $just: center, $align: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $align;
+}
+
 @mixin link-elements {
     content: "";
-    display: flex;
+    @include flex(column);
     position: absolute;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     text-decoration: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     color: black;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1;
-}
-
-@mixin like {
-    position: relative;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 2;
-    &__i {
-        position: absolute;
-        color: $color-txt-primary;
-        &--over {
-            font-size: 1.35rem;
-            color: $color-txt-secondary;
-        }
-        &--fill {
-            font-size: 1.6rem;
-            transform: scale(0);
-            background: linear-gradient(0deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    }
-    &__fillcontainer {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 1.2rem;
-        height: 1.2rem;
-        &:hover > i {
-            animation: fillheart .3s forwards;
-        }
-        &:active > i {
-            animation: fillheart .3s forwards;
-        }
-    }
-    @keyframes fillheart {
-        0% {
-            transform: scale(0);
-            opacity: 0;
-        }
-        90% {
-            transform: scale(1.05);
-            opacity: 1;
-        }
-        100%{
-            transform: scale(1);
-        }
-    }
 }
 
 @mixin animcards {

@@ -1,11 +1,15 @@
 .title {
     font-family: "Shrikand";
-    @include title-color($color-txt-primary);
+    color: $color-txt-primary;
+    font-size: 2rem;
+    & p {
+        margin: 0;
+    }
     &--restau {
         font-size: 1rem;
     }
     &--footer {
-        @include title-color($color-txt-secondary);
+        color: $color-txt-secondary;
         font-size: 1.1rem;
     }
 }
