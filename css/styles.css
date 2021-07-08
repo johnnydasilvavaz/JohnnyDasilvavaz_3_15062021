@@ -528,11 +528,6 @@
           animation: appear 0.5s 0.5s backwards;
 }
 
-.card__menu:nth-child(6n) {
-  -webkit-animation: appear 0.5s 0.625s backwards;
-          animation: appear 0.5s 0.625s backwards;
-}
-
 @-webkit-keyframes appear {
   0% {
     opacity: 0;

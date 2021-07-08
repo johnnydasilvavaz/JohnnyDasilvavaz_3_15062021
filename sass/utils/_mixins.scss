@@ -31,7 +31,7 @@
 }
 
 @mixin animcards {
-    @for $i from 1 through 5 {
+    @for $i from 1 through 4 {
         &:nth-child(#{$i +1}n) {
             animation: appear .5s #{$i / 8}s backwards;
         }
