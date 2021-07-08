@@ -61,7 +61,6 @@
             &--restau {
                 display: block;
                 height: 100%;
-                overflow: hidden;
                 & p, h3 {
                     display: block;
                     height: 50%;
@@ -132,6 +131,7 @@
             margin: 0px;
         }
     }
+
     /*Fonctionnement cards*/
     &__fonct {
         background-color: $color-bg-secondary;
@@ -167,6 +167,7 @@
             color: $color-primary;
         }
     }
+
     /*Restaurants cards*/
     &__restau {
         @include flex(column, flex-start);
@@ -181,6 +182,7 @@
             max-width: 30rem;
         }
     }
+
     /*Menu cards*/
     &__menu {
         @include flex;

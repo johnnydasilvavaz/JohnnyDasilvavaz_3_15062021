@@ -32,8 +32,8 @@
 
 @mixin animcards {
     @for $i from 1 through 5 {
-        &:nth-child(0n + #{$i}) {
-            animation: appear .5s #{$i / 8 - .125}s backwards;
+        &:nth-child(#{$i +1}n) {
+            animation: appear .5s #{$i / 8}s backwards;
         }
     }
     @keyframes appear {
